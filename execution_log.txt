@@ -1,0 +1,278 @@
+Lambda Execution Result (Latest Run):
+=== Experiment Errors ===
+
+2025-09-30 04:19:07,665 - INFO - Starting LP Conformal Prediction Experiment on Financial Market Data
+
+2025-09-30 04:19:07,665 - INFO - Generating synthetic financial market data...
+
+2025-09-30 04:19:07,683 - INFO - Generating financial predictions...
+
+2025-09-30 04:19:07,694 - INFO - Testing LP robust conformal prediction on financial data...
+
+2025-09-30 04:19:07,695 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.020
+
+2025-09-30 04:19:07,702 - INFO - ε=0.05, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,702 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.050
+
+2025-09-30 04:19:07,708 - INFO - ε=0.05, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,708 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.080
+
+2025-09-30 04:19:07,715 - INFO - ε=0.05, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,715 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.020
+
+2025-09-30 04:19:07,721 - INFO - ε=0.10, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,721 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050
+
+2025-09-30 04:19:07,727 - INFO - ε=0.10, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,727 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.080
+
+2025-09-30 04:19:07,733 - INFO - ε=0.10, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,734 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.020
+
+2025-09-30 04:19:07,740 - INFO - ε=0.20, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,740 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050
+
+2025-09-30 04:19:07,746 - INFO - ε=0.20, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,746 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.080
+
+2025-09-30 04:19:07,752 - INFO - ε=0.20, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,752 - INFO - Comparing with standard conformal prediction...
+
+2025-09-30 04:19:07,752 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000
+
+2025-09-30 04:19:07,758 - INFO - 
+
+============================================================
+
+2025-09-30 04:19:07,758 - INFO - FINAL FINANCIAL EXPERIMENT RESULTS
+
+2025-09-30 04:19:07,758 - INFO - ============================================================
+
+2025-09-30 04:19:07,758 - INFO - Standard Conformal Prediction (ε=0, ρ=0):
+
+2025-09-30 04:19:07,758 - INFO -   Coverage: 0.269 (Target: 0.900)
+
+2025-09-30 04:19:07,758 - INFO -   Average Interval Width: 0.00% of price
+
+2025-09-30 04:19:07,758 - INFO - 
+
+LP Robust Conformal Prediction Results:
+
+2025-09-30 04:19:07,758 - INFO - ε	ρ	Coverage	Width(%)	Improvement
+
+2025-09-30 04:19:07,758 - INFO - -------------------------------------------------------
+
+2025-09-30 04:19:07,759 - INFO - 0.05	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,759 - INFO - 0.05	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,759 - INFO - 0.05	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,759 - INFO - 0.10	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,759 - INFO - 0.10	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,759 - INFO - 0.10	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,759 - INFO - 0.20	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,759 - INFO - 0.20	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,759 - INFO - 0.20	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,759 - INFO - 
+
+FINANCIAL MARKET SPECIFIC ANALYSIS:
+
+2025-09-30 04:19:07,759 - ERROR - Experiment failed with error: list index out of range
+
+2025-09-30 04:19:07,764 - ERROR - Traceback: Traceback (most recent call last):
+
+File "/app/experiment.py", line 618, in main
+
+volatility_threshold = MathUtils.percentile(test_data['volatility'], 75)
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+File "/app/experiment.py", line 39, in percentile
+
+return sorted_data[int(index)]
+
+~~~~~~~~~~~^^^^^^^^^^^^
+
+IndexError: list index out of range
+
+{
+
+"experimentStatusCode": 500,
+
+"body": {
+
+"message": "Experiment failed",
+
+"returncode": 1,
+
+"stdout": "",
+
+"stderr": "2025-09-30 04:19:07,665 - INFO - Starting LP Conformal Prediction Experiment on Financial Market Data\n2025-09-30 04:19:07,665 - INFO - Generating synthetic financial market data...\n2025-09-30 04:19:07,683 - INFO - Generating financial predictions...\n2025-09-30 04:19:07,694 - INFO - Testing LP robust conformal prediction on financial data...\n2025-09-30 04:19:07,695 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.020\n2025-09-30 04:19:07,702 - INFO - \u03b5=0.05, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,702 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.050\n2025-09-30 04:19:07,708 - INFO - \u03b5=0.05, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,708 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.080\n2025-09-30 04:19:07,715 - INFO - \u03b5=0.05, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,715 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.020\n2025-09-30 04:19:07,721 - INFO - \u03b5=0.10, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,721 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050\n2025-09-30 04:19:07,727 - INFO - \u03b5=0.10, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,727 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.080\n2025-09-30 04:19:07,733 - INFO - \u03b5=0.10, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,734 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.020\n2025-09-30 04:19:07,740 - INFO - \u03b5=0.20, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,740 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050\n2025-09-30 04:19:07,746 - INFO - \u03b5=0.20, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,746 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.080\n2025-09-30 04:19:07,752 - INFO - \u03b5=0.20, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,752 - INFO - Comparing with standard conformal prediction...\n2025-09-30 04:19:07,752 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000\n2025-09-30 04:19:07,758 - INFO - \n============================================================\n2025-09-30 04:19:07,758 - INFO - FINAL FINANCIAL EXPERIMENT RESULTS\n2025-09-30 04:19:07,758 - INFO - ============================================================\n2025-09-30 04:19:07,758 - INFO - Standard Conformal Prediction (\u03b5=0, \u03c1=0):\n2025-09-30 04:19:07,758 - INFO -   Coverage: 0.269 (Target: 0.900)\n2025-09-30 04:19:07,758 - INFO -   Average Interval Width: 0.00% of price\n2025-09-30 04:19:07,758 - INFO - \nLP Robust Conformal Prediction Results:\n2025-09-30 04:19:07,758 - INFO - \u03b5\t\u03c1\tCoverage\tWidth(%)\tImprovement\n2025-09-30 04:19:07,758 - INFO - -------------------------------------------------------\n2025-09-30 04:19:07,759 - INFO - 0.05\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,759 - INFO - 0.05\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,759 - INFO - 0.05\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,759 - INFO - 0.10\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,759 - INFO - 0.10\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,759 - INFO - 0.10\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,759 - INFO - 0.20\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,759 - INFO - 0.20\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,759 - INFO - 0.20\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,759 - INFO - \nFINANCIAL MARKET SPECIFIC ANALYSIS:\n2025-09-30 04:19:07,759 - ERROR - Experiment failed with error: list index out of range\n2025-09-30 04:19:07,764 - ERROR - Traceback: Traceback (most recent call last):\n  File \"/app/experiment.py\", line 618, in main\n    volatility_threshold = MathUtils.percentile(test_data['volatility'], 75)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/experiment.py\", line 39, in percentile\n    return sorted_data[int(index)]\n           ~~~~~~~~~~~^^^^^^^^^^^^\nIndexError: list index out of range\n\n",
+
+"execution_time": null
+
+}
+
+}
+
+INIT_REPORT Init Duration: 468.65 ms	Phase: init	Status: error	Error Type: Runtime.ExitError
+
+=== Experiment Errors ===
+
+2025-09-30 04:19:07,873 - INFO - Starting LP Conformal Prediction Experiment on Financial Market Data
+
+2025-09-30 04:19:07,873 - INFO - Generating synthetic financial market data...
+
+2025-09-30 04:19:07,891 - INFO - Generating financial predictions...
+
+2025-09-30 04:19:07,900 - INFO - Testing LP robust conformal prediction on financial data...
+
+2025-09-30 04:19:07,900 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.020
+
+2025-09-30 04:19:07,907 - INFO - ε=0.05, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,907 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.050
+
+2025-09-30 04:19:07,913 - INFO - ε=0.05, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,913 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.080
+
+2025-09-30 04:19:07,920 - INFO - ε=0.05, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,920 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.020
+
+2025-09-30 04:19:07,926 - INFO - ε=0.10, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,926 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050
+
+2025-09-30 04:19:07,932 - INFO - ε=0.10, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,932 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.080
+
+2025-09-30 04:19:07,939 - INFO - ε=0.10, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,939 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.020
+
+2025-09-30 04:19:07,945 - INFO - ε=0.20, ρ=0.02: Coverage=0.276, Width=0.00%
+
+2025-09-30 04:19:07,945 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050
+
+2025-09-30 04:19:07,951 - INFO - ε=0.20, ρ=0.05: Coverage=0.297, Width=0.00%
+
+2025-09-30 04:19:07,951 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.080
+
+2025-09-30 04:19:07,958 - INFO - ε=0.20, ρ=0.08: Coverage=0.341, Width=0.00%
+
+2025-09-30 04:19:07,958 - INFO - Comparing with standard conformal prediction...
+
+2025-09-30 04:19:07,958 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000
+
+2025-09-30 04:19:07,964 - INFO - 
+
+============================================================
+
+2025-09-30 04:19:07,964 - INFO - FINAL FINANCIAL EXPERIMENT RESULTS
+
+2025-09-30 04:19:07,964 - INFO - ============================================================
+
+2025-09-30 04:19:07,964 - INFO - Standard Conformal Prediction (ε=0, ρ=0):
+
+2025-09-30 04:19:07,964 - INFO -   Coverage: 0.269 (Target: 0.900)
+
+2025-09-30 04:19:07,964 - INFO -   Average Interval Width: 0.00% of price
+
+2025-09-30 04:19:07,964 - INFO - 
+
+LP Robust Conformal Prediction Results:
+
+2025-09-30 04:19:07,964 - INFO - ε	ρ	Coverage	Width(%)	Improvement
+
+2025-09-30 04:19:07,964 - INFO - -------------------------------------------------------
+
+2025-09-30 04:19:07,964 - INFO - 0.05	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,964 - INFO - 0.05	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,964 - INFO - 0.05	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,964 - INFO - 0.10	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,964 - INFO - 0.10	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,964 - INFO - 0.10	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,964 - INFO - 0.20	0.02	0.276		0.00%		+0.007
+
+2025-09-30 04:19:07,964 - INFO - 0.20	0.05	0.297		0.00%		+0.029
+
+2025-09-30 04:19:07,964 - INFO - 0.20	0.08	0.341		0.00%		+0.072
+
+2025-09-30 04:19:07,964 - INFO - 
+
+FINANCIAL MARKET SPECIFIC ANALYSIS:
+
+2025-09-30 04:19:07,964 - ERROR - Experiment failed with error: list index out of range
+
+2025-09-30 04:19:07,969 - ERROR - Traceback: Traceback (most recent call last):
+
+File "/app/experiment.py", line 618, in main
+
+volatility_threshold = MathUtils.percentile(test_data['volatility'], 75)
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+File "/app/experiment.py", line 39, in percentile
+
+return sorted_data[int(index)]
+
+~~~~~~~~~~~^^^^^^^^^^^^
+
+IndexError: list index out of range
+
+{
+
+"experimentStatusCode": 500,
+
+"body": {
+
+"message": "Experiment failed",
+
+"returncode": 1,
+
+"stdout": "",
+
+"stderr": "2025-09-30 04:19:07,873 - INFO - Starting LP Conformal Prediction Experiment on Financial Market Data\n2025-09-30 04:19:07,873 - INFO - Generating synthetic financial market data...\n2025-09-30 04:19:07,891 - INFO - Generating financial predictions...\n2025-09-30 04:19:07,900 - INFO - Testing LP robust conformal prediction on financial data...\n2025-09-30 04:19:07,900 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.020\n2025-09-30 04:19:07,907 - INFO - \u03b5=0.05, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,907 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.050\n2025-09-30 04:19:07,913 - INFO - \u03b5=0.05, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,913 - INFO - Fitted LP conformal predictor with epsilon=0.050, rho=0.080\n2025-09-30 04:19:07,920 - INFO - \u03b5=0.05, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,920 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.020\n2025-09-30 04:19:07,926 - INFO - \u03b5=0.10, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,926 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050\n2025-09-30 04:19:07,932 - INFO - \u03b5=0.10, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,932 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.080\n2025-09-30 04:19:07,939 - INFO - \u03b5=0.10, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,939 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.020\n2025-09-30 04:19:07,945 - INFO - \u03b5=0.20, \u03c1=0.02: Coverage=0.276, Width=0.00%\n2025-09-30 04:19:07,945 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050\n2025-09-30 04:19:07,951 - INFO - \u03b5=0.20, \u03c1=0.05: Coverage=0.297, Width=0.00%\n2025-09-30 04:19:07,951 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.080\n2025-09-30 04:19:07,958 - INFO - \u03b5=0.20, \u03c1=0.08: Coverage=0.341, Width=0.00%\n2025-09-30 04:19:07,958 - INFO - Comparing with standard conformal prediction...\n2025-09-30 04:19:07,958 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000\n2025-09-30 04:19:07,964 - INFO - \n============================================================\n2025-09-30 04:19:07,964 - INFO - FINAL FINANCIAL EXPERIMENT RESULTS\n2025-09-30 04:19:07,964 - INFO - ============================================================\n2025-09-30 04:19:07,964 - INFO - Standard Conformal Prediction (\u03b5=0, \u03c1=0):\n2025-09-30 04:19:07,964 - INFO -   Coverage: 0.269 (Target: 0.900)\n2025-09-30 04:19:07,964 - INFO -   Average Interval Width: 0.00% of price\n2025-09-30 04:19:07,964 - INFO - \nLP Robust Conformal Prediction Results:\n2025-09-30 04:19:07,964 - INFO - \u03b5\t\u03c1\tCoverage\tWidth(%)\tImprovement\n2025-09-30 04:19:07,964 - INFO - -------------------------------------------------------\n2025-09-30 04:19:07,964 - INFO - 0.05\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,964 - INFO - 0.05\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,964 - INFO - 0.05\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,964 - INFO - 0.10\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,964 - INFO - 0.10\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,964 - INFO - 0.10\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,964 - INFO - 0.20\t0.02\t0.276\t\t0.00%\t\t+0.007\n2025-09-30 04:19:07,964 - INFO - 0.20\t0.05\t0.297\t\t0.00%\t\t+0.029\n2025-09-30 04:19:07,964 - INFO - 0.20\t0.08\t0.341\t\t0.00%\t\t+0.072\n2025-09-30 04:19:07,964 - INFO - \nFINANCIAL MARKET SPECIFIC ANALYSIS:\n2025-09-30 04:19:07,964 - ERROR - Experiment failed with error: list index out of range\n2025-09-30 04:19:07,969 - ERROR - Traceback: Traceback (most recent call last):\n  File \"/app/experiment.py\", line 618, in main\n    volatility_threshold = MathUtils.percentile(test_data['volatility'], 75)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/experiment.py\", line 39, in percentile\n    return sorted_data[int(index)]\n           ~~~~~~~~~~~^^^^^^^^^^^^\nIndexError: list index out of range\n\n",
+
+"execution_time": null
+
+}
+
+}
+
+INIT_REPORT Init Duration: 185.78 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+
+START RequestId: a41d1fc2-6350-4a0f-8d57-a944484b31ae Version: $LATEST
+
+RequestId: a41d1fc2-6350-4a0f-8d57-a944484b31ae Error: Runtime exited without providing a reason
+Runtime.ExitError
+
+END RequestId: a41d1fc2-6350-4a0f-8d57-a944484b31ae
+
+REPORT RequestId: a41d1fc2-6350-4a0f-8d57-a944484b31ae	Duration: 188.02 ms	Billed Duration: 189 ms	Memory Size: 3008 MB	Max Memory Used: 17 MB	
+
